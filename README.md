@@ -24,4 +24,4 @@ On Python Virtual Environments
 
 Virtual environments can be finicky because of the version of Python used, and the site-packages for that version. This image uses Python 3.5, so the environment should be set up for it.
 
-If you need to set it up, run `docker run --rm -v (PATH TO YOUR FASTCGI APPLICATION):/var/www/app nginx-fastcgi 'cd /var/www/app && apk add py-virtualenv && virtualenv -p python3 venv && source venv/bin/activate && pip install -r requirements.txt'`. (TODO: Make that easier.)
+If you need to set it up, run `docker run --rm -v (PATH TO YOUR FASTCGI APPLICATION):/var/www/app nginx-fastcgi sh -c 'cd /var/www/app && apk add py-virtualenv && virtualenv -p python3 venv && source venv/bin/activate && pip install -r requirements.txt'`. (TODO: Make that easier.)

@@ -1,6 +1,6 @@
 #!/bin/sh
 
 supervisord -n -c /etc/supervisord.conf &
-nginx -g 'daemon off;'
+nginx -g 'daemon off;' &
 
 wait
